@@ -1,0 +1,3 @@
+{     
+    "python.pythonPath": "env/bin/python"  // or "env\\Scripts\\python.exe" on Windows 
+}
