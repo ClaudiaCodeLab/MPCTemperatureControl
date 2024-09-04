@@ -4,8 +4,23 @@ import cvxpy as cp
 import matplotlib.pyplot as plt
 from io import BytesIO
 
-# Define the MPC function
-def run_mpc(current_temp, setpoint_temp, alpha=0.1, beta=0.5, delta_t=1.0, N=10, lambda_reg=0.1):
+def run_mpc(current_temp: float, setpoint_temp: float, alpha: float = 0.1, beta: float = 0.5, 
+            delta_t: float = 1.0, N: int = 10, lambda_reg: float = 0.1) -> tuple:
+    """
+    Run Model Predictive Control (MPC) for temperature control.
+
+    Args:
+        current_temp (float): Current room temperature in Celsius.
+        setpoint_temp (float): Desired room temperature in Celsius.
+        alpha (float, optional): Heat loss coefficient. Defaults to 0.1.
+        beta (float, optional): Heating efficiency coefficient. Defaults to 0.5.
+        delta_t (float, optional): Time step in hours. Defaults to 1.0.
+        N (int, optional): Prediction horizon. Defaults to 10.
+        lambda_reg (float, optional): Regularization parameter. Defaults to 0.1.
+
+    Returns:
+        tuple: Contains arrays for time, room temperature, ambient temperature, and control input.
+    """
     # Parameters
     total_time_steps = 50
     time = np.arange(total_time_steps)
