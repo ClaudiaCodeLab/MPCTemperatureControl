@@ -27,8 +27,8 @@ Install the required packages:
 ## Usage
 
 Run the Streamlit app:
-
-bash
+ 
+ bash
 
     streamlit run src/temperature_control_mpc.py
 
@@ -36,12 +36,16 @@ Then, open your web browser and go to the URL displayed in the terminal (usually
 
 Use the sliders in the sidebar to adjust the current temperature and desired setpoint temperature. The graph will update in real-time to show the system's response.
 
-##Dependencies
+## Dependencies
 
 - streamlit
 - numpy
 - cvxpy
 - matplotlib
+
+## Live Demo
+
+You can also access a live demo of the Streamlit app here: https://mpctemperaturecontrol-2daefjhfb44fvkg26u2oht.streamlit.app/
 
 ## Contributing
 
